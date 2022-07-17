@@ -11,14 +11,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener {
-            rollDice()
+            rollDice() // called function rollDice()
         }
     }
 
+    /**
+     *
+     *  rollDice function
+     *  make a new dice has 6 sides
+     *  and roll number to display on phone screen
+     *
+     */
     private fun rollDice(){
-        val dice = Dice(6)
-        val rolledNumber = dice.roll()
-        val rollText: TextView = findViewById(R.id.roll_number)
-        rollText.text = rolledNumber.toString()
+        val dice = Dice(6) // Create dice
+        val rolledNumber = dice.roll() // Roll dice and assign to 'rolledNumber'
+        val rollText: TextView = findViewById(R.id.roll_number) // Get the roll_number text view
+        rollText.text = rolledNumber.toString() // set a rolled number to textview ( don't forget to change it to string)
     }
 }
